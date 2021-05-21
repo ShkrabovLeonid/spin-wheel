@@ -1,0 +1,138 @@
+.wheel-block{
+    position: relative;
+    width: 300px;
+    margin: 0 auto;
+
+    .rotating {
+        height: 300px;
+        margin-bottom: 50px;
+        transition: all 3s;
+        transition-timing: ease-in-out;
+    }
+    
+    .wheel{
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        border: 1px solid black;
+        overflow: hidden;
+        position: absolute;
+        display: flex;
+        font-size: 45px;
+        &__item_6 {
+            background-image: conic-gradient(red 16.67%, #fff0 0);
+            z-index: 6;
+            &::after{
+                content: '6';
+                margin: 25px auto;
+                transform: rotate(30deg);
+            }
+        }
+        &__item_1 {
+            background-image: conic-gradient(green 33.33%, #fff0 0);
+            z-index: 5;
+            &::after{
+                content: '1';
+                margin: 25px auto;
+                transform: rotate(90deg);
+            }
+        }
+        &__item_2 {
+            background-image: conic-gradient(blue 50%, #fff0 0);
+            z-index: 4;
+            &::after{
+                content: '2';
+                margin: 25px auto;
+                transform: rotate(150deg);
+            }
+        }
+        &__item_3 {
+            background-image: conic-gradient(yellow 66.67%, #fff0 0);
+            z-index: 3;
+            &::after{
+                content: '3';
+                margin: 25px auto;
+                transform: rotate(210deg);
+            }
+        }
+        &__item_4 {
+            background-image: conic-gradient(cyan 83.33%, #fff0 0);
+            z-index: 2;
+            &::after{
+                content: '4';
+                margin: 25px auto;
+                transform: rotate(270deg);
+            }
+        }
+        &__item_5 {
+            background-image: conic-gradient(orange 100%, #fff0 0);
+            z-index: 1;
+            &::after{
+                content: '5';
+                margin: 25px auto;
+                transform: rotate(330deg);
+            }
+        }
+    }
+      
+      .arrow {
+        background: url("data:image/svg+xml,%3Csvg id='blue_copy' style='enable-background:new 0 0 100 100;' version='1.1' viewBox='0 0 100 100' xml:space='preserve' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg id='Layer_8_copy_4_2_'%3E%3Cpath d='M70.787,27.267v8.294c0,0.571-0.305,1.1-0.8,1.385L49.776,48.615c-1.066,0.616-1.066,2.155,0,2.771l20.212,11.669 c0.495,0.286,0.8,0.814,0.8,1.385v8.294c0,1.231-1.333,2.001-2.399,1.385L29.013,51.385c-1.066-0.616-1.066-2.155,0-2.771 l39.375-22.733C69.454,25.266,70.787,26.035,70.787,27.267z'/%3E%3Cpath d='M69.987,63.055l-2.376-1.372c-0.013,0.043-0.023,0.09-0.032,0.136l0.409,0.236c0.495,0.286,0.8,0.814,0.8,1.385v8.294 c0,1.008-0.894,1.693-1.803,1.575l1.404,0.81c1.066,0.616,2.399-0.154,2.399-1.385V64.44C70.787,63.868,70.482,63.34,69.987,63.055 z'/%3E%3Cpath d='M49.776,48.615l20.212-11.669c0.495-0.286,0.8-0.814,0.8-1.385v-8.294c0-1.115-1.092-1.84-2.091-1.512 c0.054,0.16,0.091,0.328,0.091,0.512v8.294c0,0.571-0.305,1.1-0.8,1.385L47.776,47.615c-0.078,0.052-0.745,0.516-0.8,1.385 c-0.057,0.911,0.609,1.467,0.673,1.518c0.639,0.443,1.277,0.885,1.916,1.328c-0.032-0.112-0.07-0.312,0.019-0.51 c0.011-0.025,0.024-0.049,0.037-0.07C48.725,50.593,48.768,49.196,49.776,48.615z'/%3E%3Cpath d='M70.787,27.267v8.294c0,0.571-0.305,1.1-0.8,1.385L49.776,48.615 c-1.066,0.616-1.066,2.155,0,2.771l20.212,11.669c0.495,0.286,0.8,0.814,0.8,1.385v8.294c0,1.231-1.333,2.001-2.399,1.385 L29.013,51.385c-1.066-0.616-1.066-2.155,0-2.771l39.375-22.733C69.454,25.266,70.787,26.035,70.787,27.267z' style='fill:none;stroke:%23000000;stroke-miterlimit:10;'/%3E%3C/g%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: 100px;
+        right: -100px;
+      }
+}
+
+.control-panel{
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    .input_guess{
+        width: 100%;
+        margin-bottom: 15px;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        label{
+            text-align: center;
+        }
+        input{
+            width: 250px;
+            margin: 0 auto;
+        }
+    }
+}
+
+@media(max-width:500px){
+    .modal{
+        width: auto;
+        max-width: 600px;
+        height: auto;
+        margin: 30px;
+    }
+
+    .wheel-block {
+        width: 200px;
+        .arrow{
+            width: 50px;
+            height: 50px;
+            top: 75px;
+            right: -50px;
+        }
+        .wheel{
+            width: 200px;
+            height: 200px;
+            font-size: 25px;
+        }
+        .rotating{
+            height: 200px;
+        }
+        $size: 25px;
+    }
+    .control-panel .input_guess input{
+        width: 100%;
+    }
+}

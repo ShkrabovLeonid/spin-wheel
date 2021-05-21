@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Колесо</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>Выиграй два пол царства!</h1>
+            <p>Угадай число!</p>
+        </header>
+        <div class="wheel-block">
+            <div class="arrow"></div>
+            <!-- rotating -->
+            <div class="rotating">
+                <div class="wheel wheel__item_1"></div>
+                <div class="wheel wheel__item_2"></div>
+                <div class="wheel wheel__item_3"></div>
+                <div class="wheel wheel__item_4"></div>
+                <div class="wheel wheel__item_5"></div>
+                <div class="wheel wheel__item_6"></div>
+            </div>
+
+            <div class="control-panel">
+                <div class="input_guess">
+                    <label for="guess">Загадай число:</label>
+                    <input id="guess" type="number" max="6">
+                </div>
+
+                <button class="button spin">Крутить!</button>
+            </div>
+        </div>
+        <footer>
+            <div id="modal_1"></div>
+            <div class="overlay-modal"></div>
+            <script src="js/script.bundle.js"></script>
+        </footer>
+    </div>
+</body>
+
+</html>

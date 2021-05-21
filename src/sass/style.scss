@@ -1,0 +1,38 @@
+@import 'vars';
+@import 'reset';
+@import 'wheel';
+@import 'modal';
+
+body{
+    background-color: $backgroundColor;
+    min-height: -webkit-fill-available;
+}
+html{
+    height: -webkit-fill-available;
+}
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
+}
+header{
+    display: block;
+    width: 100%;
+    top: 0;
+    margin: 50px 0;
+    text-align: center;
+}
+
+.button{
+    display: block;
+    cursor: pointer;
+}
+
+@media(max-width:500px){
+    h1{
+        font-size: 24px;
+    }
+}

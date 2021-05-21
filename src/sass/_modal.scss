@@ -1,0 +1,105 @@
+.modal{
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    background-color: #c3c3c3;
+    width: 100%;
+    max-width: 600px;
+    height: max-content;
+    margin: auto;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    padding: 30px;
+    border-radius: 15px;
+    z-index: -1;
+    &.active{
+        z-index: 9999;
+    }
+    &__header{
+        height: 50px;
+        position: relative;
+        width: 100%;
+    }
+    &__close{
+        position: relative;
+        float: right;
+        padding: 15px;
+        cursor: pointer;
+    }
+    &__content{
+        display: flex;
+        width: 100%;
+    }
+}
+.overlay-modal{
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    background-color: #00000070;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    &.active{
+        z-index: 9998;
+    }
+}
+.active{
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+.content{
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    &__info-block{
+        display: flex;
+        flex-flow: wrap;
+        justify-content: center;
+        align-items: center;
+        margin: 30px 0;
+    }
+    &__item{
+        flex: 1 1 47%;
+        min-width: 250px;
+        img{
+            width: 255px;
+            height: 306px;
+        }
+    }
+    &__item + &__item{
+        margin-left: 30px;
+    }
+    &__button{
+
+    }
+}
+@media(max-width:589px){
+    .modal{
+        bottom: unset;
+        width: auto;
+        margin: 5px;
+    }
+    .content{
+        &__item{
+            img{
+                margin: auto;
+                max-height: 200px;
+                object-fit: cover;
+                object-position: top;
+            }
+        }
+        &__item + &__item{
+            margin-left: 0px;
+            margin-top: 15px;
+        }
+        &__info-block{
+            margin: 10px 0 30px;
+        }
+    }
+}
